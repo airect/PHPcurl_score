@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimum-scale=1" />
+<title>成绩查询</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+.header,.container,.footer{
+	/*width: 100%;*/
+}
+.header,.footer{
+	background: #333;
+	color:#FFF;
+	/*width:96%;*/
+	padding: 0 4%;
+}
+/*header*/
+.header{
+	height: 60px;
+	overflow: hidden;
+	font: 18px/60px "";
+}
+.header .header-logo{
+	float: left;
+}
+.header .header-sign{
+	float: right;	
+}
+/*container*/
+.container{
+	height: auto;
+}
+.container .article{
+	padding: 10px 8%;
+	margin: 10px 0;
+	background: #EEE;
+	border-radius: 8px;
+}
+.article .title{
+	text-align: left;
+	border-bottom: 1px solid #FFF;
+	font: 20px "";
+}
+.article .time{
+	margin:4px 0;
+	text-align: right;
+}
+.article .content{
+	font: 14px "黑体";
+}
+#form{
+    margin: 70px auto 0;
+    width: 220px;
+}
+#form>input{
+    border: 1px solid #CCC;
+    padding: 10px 18px;
+    font: 18px "";
+    margin: 20px auto ;
+    border-radius: 2px;
+}
+#form>button{
+    border: none;
+    padding:10px 18px;
+    font: 18px "";
+    width:100px;
+    background: #8ECB78;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 2px;
+}
+/*footer*/
+.footer{
+	height: 50px;
+	background: #333;
+	text-align: center;
+	font: 16px/50px "";
+	position: fixed;
+	bottom: 0;
+	padding: 0;
+	width: 100%;
+}
+.footer .footer-inner{
+	padding: 0 4%;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<div class="header-logo">
+			<!--<img src="./images/logo.png" />-->
+		</div>
+		<p>&gt;_&lt;!</p>
+		<div class="header-sign"></div>
+	</div>
+	<div class="container">
+        <form id="form" action="index.php" method="post">
+            <input type="text" name="username" id="uname" placeholder="账号" />
+            <input type="password" name="passwd" id="passwd" placeholder="密码" />
+            <button type="submit" id="btn">查询</button>
+        </form>
+	</div>
+	<div class="footer">
+		<div class="footer-inner">
+		<p>copyright Airect</p>
+		</p>
+	</div>
+    <script>
+    //var btn = document.getElementById("btn");
+//    btn.onclick = function() {
+//        var username = document.getElementById("uname").value;
+//        var passwd   = document.getElementById("passwd").value;
+//        var xmlhttp = new XMLHttpRequest();
+//        xmlhttp.open('POST','http://',true);
+//        xmlhttp.onreadystatechange = function(){
+//            if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+//                var response = JSON.parse(xmlhttp.responseText);
+//                if(!response.error){
+//                    location.href = '';
+//                }
+//            }
+//    }
+//    xmlhttp.send();
+//    }    
+//   
+    </script>
+</body>
+</html>
