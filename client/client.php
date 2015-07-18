@@ -13,10 +13,9 @@ $flag = false;
 if($code == 'ccj'){
 	$flag = true;
 }
-var_dump($flag);
 if(!$flag){
-	if(!($username >= 20132515154 && $passwd <= 20132515198)){
-		echo "<script>alert('这个玩意已经停止提供服务！');</script>";
+	if(!($username >= 20132515154 && $username <= 20132515198)){
+		die("<script>alert('这个玩意已经停止提供服务！');location.href = 'http://www.baidu.com';</script>");
 	}	
 }
 
