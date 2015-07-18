@@ -11,7 +11,7 @@ $param = array(
 	'username' => $username,
 	'passwd'   => $passwd
 );
-$url  =  './cjcx.php';
+$url  =  './server/server.php';
 $curl->curlPost($url,$param);
 $content = $curl->getContent();
 var_dump($content);
