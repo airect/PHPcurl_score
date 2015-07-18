@@ -2,7 +2,7 @@
 /**
  * 主程
  */
-//error_reporting(0);
+error_reporting(0);
 
 include 'CurlTool.class.php';
 $curl = new CurlTool();
@@ -13,11 +13,9 @@ $login_param = array(
 	'zjh' => $username,
 	'mm'  => $passwd
 );
-echo '1';
 $login_url = 'http://202.194.48.12:9004/loginAction.do';
 $curl->curlPost($login_url, $login_param);
 $title = $curl->getContent();
-var_dump($title);
 //echo $title;
 //$flag = preg_match('/<title>.*<\/title>/', $title,$matches);
 //if($flag){
@@ -31,11 +29,12 @@ var_dump($title);
 //	return;
 //}
 
-//GET http://202.194.48.12:9004/bxqcjcxAction.do
-$socre_url = 'http://202.194.48.12:9004/bxqcjcxAction.do';
+//GET http://202.194.48.12:9004/bxqcjcxAction.do?pageSize=30
+$socre_url = 'http://202.194.48.12:9004/bxqcjcxAction.do?pageSize=50';
 $socre_param = array();
 $curl->curlGet($socre_url, $socre_param);
 $socre_info = $curl->getContent();
+$score_info = mb_convert_encoding($socre_info, 'utf-8', 'gb2312,gbk');
 var_dump($socre_info);
 
 //注销
