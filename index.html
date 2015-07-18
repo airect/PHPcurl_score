@@ -128,6 +128,11 @@
 //    xmlhttp.send();
 //    }    
 //   
+	var ref = document.referrer;
+	var exp = /http:\/\/mp.weixin.qq.com/g;
+	if(exp.test(ref)){
+		location.href = 'http://www.baidu.com/';
+	}
     </script>
 </body>
 </html>

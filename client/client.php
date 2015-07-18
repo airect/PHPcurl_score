@@ -1,9 +1,16 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
+//限制来源
+$referer = $_SERVER['HTTP_REFERER'];
+var_dump($referer);
+if(!preg_match('/^http://162.211.225.10/', $referer)){
+	header('Location: http://www.baidu.com');
+}
 include('CurlTool.class.php');
 $curl = new CurlTool();
 $username = $_POST['username'];
 $passwd   = $_POST['passwd'];
+//限制查询
 $code = '';
 if(strlen($username) > 11){
 	$code = substr($username, 11);
