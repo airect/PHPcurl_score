@@ -1,6 +1,6 @@
 # PHPcurl_socre
-##server
+## server
 + 放在能访问内网的外网之中，作为服务端
 
-##client
+## client
 + 放在外网中，作为客户端
